@@ -23,7 +23,7 @@ This Windows Server VM will be installed on a **Proxmox virtualization host** ru
 
 ---
 
-## Step 1: Download Required ISOs
+## Step 1: Downloaded Required ISOs
 
 ### Windows Server 2022 ISO
 
@@ -34,12 +34,8 @@ This Windows Server VM will be installed on a **Proxmox virtualization host** ru
 1. Visited Microsoft Evaluation Center
 2. Selected **Windows Server 2022 Standard**
 3. **ISO - DVD** format
-4. Selected language: English (United States)
-5. Downloaded evaluation version (180-day trial)
-
-**File Details:**
-- Filename: `SERVER_EVAL_x64FRE_en-us.iso` (approximately 5GB)
-- License: 180-day evaluation (renewable)
+4. Selected language: English 
+5. Downloaded evaluation version 
 
 ### VirtIO Drivers ISO
 
@@ -48,24 +44,20 @@ This Windows Server VM will be installed on a **Proxmox virtualization host** ru
 **Source:** Fedora Project / Proxmox  
 **URL:** https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
 
-**File Details:**
-- Filename: `virtio-win.iso` (approximately 500MB)
-- Includes: Storage, network, and display drivers
-
 ---
 
 ## Step 2: Upload ISOs to Proxmox
 
-**Access Proxmox Web Interface:**
+**Proxmox Web Interface:**
 ```
 URL: https://192.168.1.100:8006
 ```
 
 **Upload Process:**
-1. **Datacenter → [Pve] → local (storage)**
+1. **Datacenter / [Pve] / local (storage)**
 2. **ISO Images** tab
 3. Clicked **Upload** button
-4. Selected Windows Server 2022 ISO → **Upload**
+4. Selected Windows Server 2022 ISO 
 5. Repeated for VirtIO drivers ISO
 
 **Verification:**
@@ -138,8 +130,8 @@ URL: https://192.168.1.100:8006
 **Before starting the VM:**
 
 1. Selected the **DC01** VM in Proxmox left panel
-2. Go to **Hardware** tab
-3. Clicked **Add** → **CD/DVD Drive**
+2. **Hardware** tab
+3. Clicked **Add** / **CD/DVD Drive**
 4. Configuration:
    - Bus/Device: IDE
    - Storage: local
@@ -157,7 +149,7 @@ URL: https://192.168.1.100:8006
 ### 5.1 Boot VM
 
 1. Selected **DC01** VM
-2. Clicked **Start** (top-right)
+2. Clicked **Start** 
 3. Clicked **Console** to open VNC console
 4. VM boots from Windows Server ISO
 
@@ -177,7 +169,7 @@ URL: https://192.168.1.100:8006
 
 **Operating System Selection:**
 - Selected: **Windows Server 2022 Standard Evaluation (Desktop Experience)**
-- **Desktop Experience** = GUI (not Core)
+- **Desktop Experience** = GUI 
 - Click **Next**
 
 **License Terms:**
@@ -194,15 +186,15 @@ URL: https://192.168.1.100:8006
 
 **Disk Not Visible:**
 - Installer shows: "Where do you want to install Windows?"
-- No disks listed (this is expected!)
+- No disks listed 
 
 **Driver Installation:**
-1. Clicked **Load driver** (bottom-left)
+1. Clicked **Load driver** 
 2. Clicked **Browse**
-3. Navigated to **CD Drive (E:)** or similar (VirtIO ISO)
-4. Opened: `vioscsi` folder
-5. Opened: `w2k22` folder (for Windows Server 2022)
-6. Opened: `amd64` folder
+3. Navigated to **CD Drive (E:)** 
+4. Opened: vioscsi folder
+5. Opened: w2k22 folder (for Windows Server 2022)
+6. Opened: amd64 folder
 7. Click **OK**
 
 **Driver Selection:**
@@ -219,11 +211,11 @@ URL: https://192.168.1.100:8006
 
 **Disk Selection:**
 - Disk 0 Unallocated Space: 60.0 GB shown
-- Clicked **Next** (Windows creates partitions automatically)
+- Clicked **Next** 
 
 **Automatic Partitions Created:**
 - System partition: 100MB (EFI)
-- MSR (Microsoft Reserved): 16MB
+- MSR: 16MB
 - Primary partition: 59.9GB (C: drive)
 
 ### 7.2 Initial Setup
@@ -245,7 +237,7 @@ URL: https://192.168.1.100:8006
 ## Step 8: Post-Installation Configuration
 
 ### Login
-- Username: `Administrator`
+- Username: Administrator
 - Password: ********
 
 ### 8.2 Install VirtIO Network Driver
@@ -260,8 +252,8 @@ URL: https://192.168.1.100:8006
 4. Run: Guest Tools installer
 5. Installation wizard opens:
    - Clicke **Next**
-   - Accepted license → **Next**
-   - Installed location: default → **Next**
+   - Accepted license / **Next**
+   - Installed location: default / **Next**
    - Clicked **Install**
    - User Account Control: **Yes**
 6. **Reboot** 
@@ -274,7 +266,7 @@ URL: https://192.168.1.100:8006
 
 1. Opened **Network and Sharing Center**
 2. Clicked **Change adapter settings**
-3. Right-click **Ethernet** → **Properties**
+3. Right-click **Ethernet** / **Properties**
 4. Selected **Internet Protocol Version 4 (TCP/IPv4)**
 5. Clicked **Properties**
 4. **Used the following IP address:**
@@ -282,8 +274,8 @@ URL: https://192.168.1.100:8006
    - Subnet mask: 255.255.255.0
    - Default gateway: 192.168.1.1
 7. **Used the following DNS server addresses:**
-   - Preferred: `127.0.0.1` (loopback address,for future DC)
-   - Alternate: `1.1.1.1` (temporary, for installation)
+   - Preferred: 127.0.0.1 (loopback address,for future DC)
+   - Alternate: 1.1.1.1 (temporary, for installation)
 8. Clicked **OK** and **Close**
 
 **Tested Connectivity:**
@@ -302,7 +294,7 @@ Test-NetConnection -ComputerName google.com
 **GUI Method:**
 1. Right-click **Start** and **System**
 2. Clicked **Rename this PC**
-3. Entered: `DC01`
+3. Entered: DC01
 4. Clicked **Next**
 5. Clicked **Restart now**
 
@@ -321,7 +313,7 @@ Test-NetConnection -ComputerName google.com
 3. Run: Quemu installer
 4. Installation wizard:
    - Click **Next**
-   - Accept license → **Next**
+   - Accept license / **Next**
    - **Install**
    - **Finish**
 
@@ -337,7 +329,7 @@ Test-NetConnection -ComputerName google.com
 
 **Windows Update:**
 
-1. Opened **Settings** → **Windows Update**
+1. Opened **Settings** / **Windows Update**
 2. Clicked **Check for updates**
 3. Installed all available updates
 
@@ -382,13 +374,13 @@ Test-NetConnection -ComputerName google.com
 
 **Cause:** VirtIO SCSI driver not loaded
 
-**Solution:** Follow Step 6 carefully - load driver from `vioscsi\w2k22\amd64\`
+**Solution:** Follow Step 6 carefully - load driver from vioscsi\w2k22\amd64\
 
 ### Issue 2: No Network Connectivity After Install
 
 **Cause:** VirtIO network driver not installed
 
-**Solution:** Install `virtio-win-gt-x64.msi` from VirtIO ISO
+**Solution:** Install virtio-win-gt-x64.msi from VirtIO ISO
 
 ### Issue 3: QEMU Guest Agent Not Working
 
@@ -396,8 +388,8 @@ Test-NetConnection -ComputerName google.com
 
 **Solution:**
 1. Verify Guest Agent is installed in VM
-2. Check service is running: `Get-Service "QEMU-GA"`
-3. Restart service if needed: `Restart-Service "QEMU-GA"`
+2. Check service is running: Get-Service "QEMU-GA"
+3. Restart service if needed: Restart-Service "QEMU-GA"
 4. Verify in Proxmox: Hardware / Options / QEMU Guest Agent: Enabled
 
 
