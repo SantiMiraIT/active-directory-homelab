@@ -195,42 +195,42 @@ lab.local
 - Plan VM specifications
 - Design OU structure
 
-### Phase 2: Windows Server Installation (on Proxmox VM)
+### Phase 2: Windows Server Installation (on Proxmox VM) ✅
 - Create DC01 VM in Proxmox
 - Install Windows Server 2022
 - Configure static IP and networking
 - Install VirtIO drivers and Guest Agent
 - Rename server to DC01
 
-### Phase 3: Domain Controller Promotion
+### Phase 3: Domain Controller Promotion ✅
 - Promote server to Domain Controller
 - Configure lab.local domain
 - Set up DNS services
 - Create initial OU structure
 - Create test user accounts
 
-### Phase 4: Client Workstation Setup
+### Phase 4: Client Workstation Setup ✅
 - Deploy Windows 10/11 VM
 - Configure static IP
 - Join WIN10-CLI to lab.local domain
 - Test domain authentication
 - Verify DNS resolution
 
-### Phase 5: File Server Configuration
+### Phase 5: File Server Configuration ✅
 - Install File Server role on DC01
 - Create departmental shared folders
 - Configure NTFS permissions
 - Implement group-based access control
 - Test security from client
 
-### Phase 6: Group Policy Introduction
+### Phase 6: Group Policy Introduction ✅
 - Create first Group Policy Objects
 - Link GPOs to OUs
 - Configure basic policies
 - Test policy application
 - Verify with gpresult
 
-### Phase 7: Advanced Features (Future)
+### Phase 7: Advanced Features (Future) ✅
 - Group Policy advanced settings
 - PowerShell automation
 - Backup and recovery
