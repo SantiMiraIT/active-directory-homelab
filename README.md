@@ -2,7 +2,7 @@
 
 ## 🎯 Project Overview
 
-This repository documents my hands-on Active Directory home lab project, built as part of my transition from healthcare to IT support roles. The lab demonstrates practical enterprise IT skills including Windows Server administration, Active Directory management, Group Policy configuration, and PowerShell automation.
+This repository documents my hands-on Active Directory home lab project, built as part of my transition from healthcare to IT support roles. The lab demonstrates practical enterprise IT skills including Windows Server administration, Active Directory management, Group Policy configuration, and systematic troubleshooting.
 
 ## 👨‍💼 About Me
 
@@ -104,10 +104,12 @@ I'm Santino, a professional transitioning from a 10-year healthcare career (reme
 ## 📖 Documentation Structure
 
 ```
+active-directory-homelab/
+├── README.md (this file)
 ├── docs/
 │   ├── fundamentals/          # Core Active Directory concepts
 │   ├── phases/                # Step-by-step lab implementation guides
-│   ├── powershell/            # PowerShell automation scripts and guides
+│   ├── powershell/            # PowerShell automation scripts and guides (coming soon)
 │   └── interview-prep/        # Interview talking points and technical questions
 └── scripts/                   # PowerShell scripts (future)
 ```
@@ -136,9 +138,10 @@ Through this lab project, I've gained:
 
 ## 📞 Contact
 
-**LinkedIn**: [Connect with me on LinkedIn](#) <!-- Add your LinkedIn URL -->
-**Location**: Sydney, Australia
-**Email**: [Your professional email] <!-- Add your email -->
+**GitHub**: [github.com/SantiMiraIT](https://github.com/SantiMiraIT)  
+**LinkedIn**: [Add your LinkedIn URL here]  
+**Location**: Sydney, Australia  
+**Email**: [santinomirarchi@proton.me](mailto:santinomirarchi@proton.me)
 
 ---
 
@@ -152,6 +155,22 @@ This lab project was built through self-directed learning, leveraging resources 
 
 ---
 
+## 📂 Repository Contents
+
+### Core Documentation
+- **[AD Fundamentals](docs/fundamentals/AD-Core-Concepts.md)** - Understanding Active Directory concepts
+- **[Interview Preparation](docs/interview-prep/Interview-Talking-Points.md)** - Technical questions and STAR stories
+
+### Lab Phases
+- **[Phase 1](docs/phases/Phase-1-Planning.md)** - Lab Planning and Design
+- **[Phase 2](docs/phases/Phase-2-Server-Installation.md)** - Windows Server Installation
+- **[Phase 3](docs/phases/Phase-3-Domain-Controller.md)** - Domain Controller Configuration
+- **[Phase 4](docs/phases/Phase-4-Client-Workstation.md)** - Client Workstation Setup
+- **[Phase 5](docs/phases/Phase-5-File-Server.md)** - File Server and Permissions
+- **[Phase 6](docs/phases/Phase-6-Group-Policy.md)** - Group Policy Objects
+
+---
+
 **Note to Recruiters**: This repository demonstrates my commitment to continuous learning and practical skill development. Each phase includes detailed documentation showing not just what I built, but how I troubleshot issues and validated solutions - skills directly applicable to help desk support roles.
 
-*Last Updated: December 2025*
+*Last Updated: December 11, 2025*
