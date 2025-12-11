@@ -140,7 +140,7 @@ This Active Directory lab project directly supports my transition to IT help des
 lab.local
 ├── Domain Controllers (default)
 ├── Lab Users
-│   ├── John Doe (jdoe) - Test user
+│   ├── John Doe (jdoe) - Test user and IT Support
 │   ├── Frank Finance (ffinance)
 │   ├── Helen HR (hhr)
 │   └── Mike Manager (mmanager)
