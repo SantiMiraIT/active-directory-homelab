@@ -230,7 +230,7 @@ lab.local
 - Test policy application
 - Verify with gpresult
 
-### Phase 7: Advanced Features (Future) ✅
+### Phase 7: Advanced Features (Future) 
 - Group Policy advanced settings
 - PowerShell automation
 - Backup and recovery
