@@ -1,13 +1,3 @@
----
-tags:
-  - active-directory
-  - client-setup
-  - phase-4
-created: 2025-12-02
-status: complete
-phase: "4"
----
-
 # Phase 4 - Client Workstation Setup
 ## WIN10-CLI Domain Join and Configuration
 
