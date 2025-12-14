@@ -27,11 +27,11 @@ This Windows Server VM will be installed on a **Proxmox virtualization host** ru
 ## Step 1: Download Required ISOs
 
 **Download Steps:**
-1. Visit Microsoft Evaluation Center
-2. Select **Windows Server 2022 Standard**
-3. Choose **ISO - DVD** format
-4. Select language: English 
-5. Download evaluation version (180-day trial)
+1. Visited Microsoft Evaluation Center
+2. Selected **Windows Server 2022 Standard**
+3. Chose **ISO - DVD** format
+4. Selected language: English 
+5. Downloaded evaluation version (180-day trial)
 
 ### VirtIO Drivers ISO
 
@@ -54,7 +54,7 @@ Password: ******
 ```
 
 **Upload Process:**
-1. Navigated to: **Datacenter / [Pve] → local (storage)**
+1. Navigated to: **Datacenter / [Pve] / local (storage)**
 2. Selected **ISO Images** tab
 3. Clicked **Upload** button
 4. Selected Windows Server 2022 ISO / **Upload**
